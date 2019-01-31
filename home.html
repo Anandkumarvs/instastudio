@@ -17,7 +17,7 @@
         scroll-behavior: smooth;
       }
       .has-bg-image {
-        background-image: url("homepic.jpg");
+        background-image: url("res/homepic.jpg");
         background-size: cover;
       }
       #left-pane {
@@ -35,17 +35,21 @@
       }
     </style>
   </head>
+
   <body>
+    <!--Navigation Bar-->
     <nav class="navbar is-transaparent is-fixed-top" role="navigation">
       <div class="navbar-brand">
+        <!-- Instastudio Logo-->
         <div class="navbar-item is-large is-primary" id="logo">
           <img
-            src="webLogo.png"
+            src="res/webLogo.png"
             style="height: 100px; width: auto;"
             class="is-large"
           />
         </div>
       </div>
+      <!--Social Media Nav links-->
       <div class="navbar-start">
         <div class="navbar-item">
           <span class="icon">
@@ -80,22 +84,23 @@
         </div>
       </div>
 
+      <!-- Navigation Menu Right Pane-->
       <div class="navbar-menu is-active">
         <div class="navbar-end">
           <div class="navbar-item underline-item">
-            <a class="title is-4 has-text-white" href="#Creations"
+            <a class="title is-6 has-text-white" href="#Creations"
               >Creations&nbsp;</a
             >
           </div>
 
           <div class="navbar-item underline-item">
-            <a class="title is-4 has-text-white" href="#Aboutus"
+            <a class="title is-6 has-text-white" href="#Aboutus"
               >About us&nbsp;</a
             >
           </div>
 
           <div class="navbar-item underline-item">
-            <a class="title is-4 has-text-white" href="#RequestQuote"
+            <a class="title is-6 has-text-white" href="#RequestQuote"
               >Request a quote</a
             >
           </div>
@@ -103,6 +108,9 @@
       </div>
     </nav>
 
+    <!--View 1-->
+
+    <!--Left Pane Body Starts here-->
     <div class="columns is-gapless">
       <div class="column is-6">
         <div class="hero is-fullheight" id="left-pane">
@@ -111,8 +119,8 @@
               class="container"
               style="padding-left: 30%; padding-bottom: 5%;"
             >
-              <h1 class="title is-3">We are Insta Studios</h1>
-              <h2 class="subtitle is-3">
+              <h1 class="title is-4">We are Insta Studios</h1>
+              <h2 class="subtitle is-4">
                 Vellore |
                 <span
                   ><a class="subtitle" id="under" href="#RequestaQuote"
@@ -135,7 +143,7 @@
                 target="_blank"
                 ><img
                   style="width: 12%; height: auto; margin-bottom: 5%; margin-left: auto; margin-right: auto; display: block;"
-                  src="playstoreapp.png"
+                  src="res/playstoreapp.png"
               /></a>
             </div>
           </div>
@@ -149,6 +157,8 @@
         </div>
       </div>
     </div>
+
+    <!--View 2 -->
 
     <!--About Us-->
     <div class="columns is-gapless" id="Aboutus">
