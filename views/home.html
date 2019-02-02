@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Insta Studios Vellore</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .has-bg-image {
+        background-image: url("/rightpane");
+        background-size: cover;
+      }
+      #left-pane {
+        background-color: gainsboro;
+      }
+      #under {
+        text-decoration: underline;
+      }
+      .navbar {
+        background-color: transparent;
+        background-image: none;
+      }
+      .sides {
+        background-color: gainsboro;
+      }
+      .is-vcentered {
+        display: flex;
+        align-items: center;
+      }
+    </style>
+
+    <!-- Tab Switching JS script -->
+    <script>
+      function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("content-tab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(
+            " is-active",
+            ""
+          );
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " is-active";
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Navigation Bar-->
+    <nav class="navbar is-transaparent is-fixed-top" role="navigation">
+      <div class="navbar-brand">
+        <!-- Instastudio Logo-->
+        <div class="navbar-item is-large is-primary" id="logo">
+          <img
+            src="/logo"
+            style="height: 100px; width: auto;"
+            class="is-large"
+          />
+        </div>
+      </div>
+
+      <!--Social Media Nav links-->
+      <div class="navbar-start">
+        <div class="navbar-item">
+          <span class="icon">
+            <a
+              href="https://www.facebook.com/instaphotographyofficial/"
+              style="color : rgb(106, 152, 155)"
+              target="_blank"
+            >
+              <i class="fab fa-facebook"></i
+            ></a>
+          </span>
+        </div>
+        <div class="navbar-item">
+          <span class="icon ">
+            <a
+              href="https://www.instagram.com/insta_studio_vellore/"
+              style="color : rgb(106, 152, 155)"
+              targer="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </span>
+        </div>
+        <div class="navbar-item">
+          <span class="icon">
+            <a
+              href="https://www.youtube.com/channel/UCTghfTvH9Z2DMRRuMJdYcRw"
+              style="color : rgb(106, 152, 155)"
+              target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </span>
+        </div>
+      </div>
+
+      <!-- Navigation Menu Right Pane-->
+      <div class="navbar-menu is-active">
+        <div class="navbar-end">
+          <div class="navbar-item underline-item">
+            <a class="title is-6 has-text-white" href="#Creations"
+              >Creations&nbsp;</a
+            >
+          </div>
+
+          <div class="navbar-item underline-item">
+            <a class="title is-6 has-text-white" href="#Aboutus"
+              >About us&nbsp;</a
+            >
+          </div>
+
+          <div class="navbar-item underline-item">
+            <a class="title is-6 has-text-white" href="/RequestaQuote"
+              >Request a quote</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--View 1-->
+
+    <!--Left Pane Body Starts here-->
+    <div class="columns is-gapless">
+      <div class="column is-6">
+        <div class="hero is-fullheight" id="left-pane">
+          <div class="hero-body">
+            <div
+              class="container"
+              style="padding-left: 30%; padding-bottom: 5%;"
+            >
+              <h1 class="title is-4">We are Insta Studios</h1>
+              <h2 class="subtitle is-4">
+                Vellore |
+                <span
+                  ><a class="subtitle" id="under" href="/RequestaQuote"
+                    >Request a quote</a
+                  ></span
+                >
+                <!--Redirect to New Page-->
+              </h2>
+              <a
+                class="button is-large has-text-white is-rounded"
+                href="#Aboutus"
+                style="background-color:rgb(120, 172, 175)"
+                >About Us</a
+              >
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-12">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.playstore.gokul.mysquad"
+                target="_blank"
+                ><img
+                  style="width: 12%; height: auto; margin-bottom: 5%; margin-left: auto; margin-right: auto; display: block;"
+                  src="/googleplay"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right image pane-->
+      <div class="column is-6 is-info is-hidden-mobile">
+        <div class="hero is-fullheight has-bg-image">
+          <div class="hero-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--View 2 -->
+
+    <!-- <div class="is-hidden-desktop">
+      <div class="columns">
+        <div class="column is-12">
+          <div class="hero is-fullheight is-primary">
+            <div class="hero-body">Hi</div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!--About Us-->
+    <!--Incomplete-->
+    <div class="columns is-gapless is-hidden-mobile" id="Aboutus">
+      <div class="column is-12 is-vcentered" style="height: 100vh">
+        <div class="container">
+          <div class="tabs is-centered is-large">
+            <ul>
+              <li class="tab is-active" onclick="openTab(event,'WhatWeDo')">
+                <a
+                  ><span class="icon is-small"
+                    ><i class="fas fa-info-circle" aria-hidden="true"></i></span
+                  ><span>What we do</span></a
+                >
+              </li>
+              <li class="tab" onclick="openTab(event,'Team')">
+                <a
+                  ><span class="icon is-small"
+                    ><i class="fas fa-users" aria-hidden="true"></i></span
+                  ><span>Team</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="container section">
+            <div id="WhatWeDo" class="content-tab" style="height: 50vh">
+              <div class="columns">
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-header-title">
+                        Events & Functions
+                      </div>
+                    </div>
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="/eventspic" alt="Events image" />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        Sit back and cherish the most important moments of your
+                        life while we chronicle them.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-header-title">
+                        Photoshoots
+                      </div>
+                    </div>
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="/photoshootspic" alt="Photoshoots Image" />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        Get the best of yourself, friends, family or collegues
+                        with our photoshoot crew.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-header-title">
+                        Product Photography
+                      </div>
+                    </div>
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="/productspic" alt="Porul" />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        Step-up the marketing for your products with our product
+                        photogrpahy and profilings.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              id="Team"
+              class="content-tab"
+              style="display:none ; height: 50vh;"
+            >
+              <div class="columns">
+                <div class="column is-3"></div>
+                <div class="column is-3 has-text-centered">
+                  <figure class="image is-square">
+                    <img
+                      class="is-rounded"
+                      src="/gokulpic"
+                      alt="Gokula Krishnan Image"
+                    />
+                  </figure>
+                  <h1 class="title is-4">Gokula Krishnan</h1>
+                </div>
+                <div class="column is-3 has-text-centered">
+                  <figure class="image is-square">
+                    <img
+                      class="is-rounded"
+                      src="/pradeeppic"
+                      alt="Gokula Krishnan Image"
+                    />
+                  </figure>
+                  <h1 class="title is-4">Pradeep</h1>
+                </div>
+                <div class="column is-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Creations-->
+    <!-- <div class="columns is-gapless">
+      <div
+        class="column is-12 is-vcentered"
+        style="height:100vh;background-color: blueviolet"
+      >
+        <div class="container"><p>Hi</p></div>
+      </div>
+    </div> -->
+  </body>
+</html>

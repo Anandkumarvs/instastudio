@@ -1,0 +1,23 @@
+{
+  "name": "instastudios",
+  "version": "1.0.0",
+  "description": "A web application for Insta studios Vellore",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vgofranchise/instastudio.git"
+  },
+  "author": "Vgo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vgofranchise/instastudio/issues"
+  },
+  "homepage": "https://github.com/vgofranchise/instastudio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
