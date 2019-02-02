@@ -12,6 +12,7 @@
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
+
     <style>
       html {
         scroll-behavior: smooth;
@@ -33,11 +34,34 @@
       .sides {
         background-color: gainsboro;
       }
+      .is-vcentered {
+        display: flex;
+        align-items: center;
+      }
     </style>
+
+    <!-- Tab Switching JS script -->
+    <script>
+      function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("content-tab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(
+            " is-active",
+            ""
+          );
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " is-active";
+      }
+    </script>
   </head>
 
   <body>
-
     <!--Navigation Bar-->
     <nav class="navbar is-transaparent is-fixed-top" role="navigation">
       <div class="navbar-brand">
@@ -124,7 +148,12 @@
               <h1 class="title is-4">We are Insta Studios</h1>
               <h2 class="subtitle is-4">
                 Vellore |
-                <span><a class="subtitle" id="under" href="#RequestaQuote">Request a quote</a></span> <!--Redirect to New Page-->
+                <span
+                  ><a class="subtitle" id="under" href="#RequestaQuote"
+                    >Request a quote</a
+                  ></span
+                >
+                <!--Redirect to New Page-->
               </h2>
               <a
                 class="button is-large has-text-white is-rounded"
@@ -149,7 +178,7 @@
       </div>
 
       <!-- Right image pane-->
-      <div class="column is-6 is-info">
+      <div class="column is-6 is-info is-hidden-mobile">
         <div class="hero is-fullheight has-bg-image">
           <div class="hero-body"></div>
         </div>
@@ -158,20 +187,149 @@
 
     <!--View 2 -->
 
-    <!--About Us--> <!--Not Yet Finished-->
-    <div class="columns is-gapless" id="Aboutus">
-      <div class="column is-2">
-        <div class="hero is-fullheight sides">
-          <div class="hero-body"></div>
+    <!-- <div class="is-hidden-desktop">
+      <div class="columns">
+        <div class="column is-12">
+          <div class="hero is-fullheight is-primary">
+            <div class="hero-body">Hi</div>
+          </div>
         </div>
       </div>
-      <div class="column is-8" style="margin-top: 20px;">
-        <div class="hero is-fullheight"><div class="hero-body"></div></div>
-      </div>
-      <div class="column is-2">
-        <div class="hero is-fullheight sides">
-          <div class="hero-body"></div>
+    </div> -->
+
+    <!--About Us-->
+    <!--Incomplete-->
+    <div class="columns is-gapless is-hidden-mobile" id="Aboutus">
+      <div class="column is-12 is-vcentered" style="height: 100vh">
+        <div class="container">
+          <div class="tabs is-centered is-large">
+            <ul>
+              <li class="tab is-active" onclick="openTab(event,'WhatWeDo')">
+                <a
+                  ><span class="icon is-small"
+                    ><i class="fas fa-info-circle" aria-hidden="true"></i></span
+                  ><span>What we do</span></a
+                >
+              </li>
+              <li class="tab" onclick="openTab(event,'Team')">
+                <a
+                  ><span class="icon is-small"
+                    ><i class="fas fa-users" aria-hidden="true"></i></span
+                  ><span>Team</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="container section">
+            <div id="WhatWeDo" class="content-tab" style="height: 50vh">
+              <div class="columns">
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-header-title">
+                        Events & Functions
+                      </div>
+                    </div>
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="res/events.jpg" alt="Events image" />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        Sit back and cherish the most important moments of your
+                        life while we chronicle them.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-header-title">
+                        Photoshoots
+                      </div>
+                    </div>
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img
+                          src="res/photoshoots.jpg"
+                          alt="Photoshoots Image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        Get the best of yourself, friends, family or collegues
+                        with our photoshoot crew.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-header-title">
+                        Product Photography
+                      </div>
+                    </div>
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="res/productphotography.jpg" alt="Porul" />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        Step-up the marketing for your products with our product
+                        photogrpahy and profilings.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              id="Team"
+              class="content-tab"
+              style="display:none ; height: 50vh;"
+            >
+              <div class="columns">
+                <div class="column is-3"></div>
+                <div class="column is-3 has-text-centered">
+                  <figure class="image is-square">
+                    <img
+                      class="is-rounded"
+                      src="res/gokul.jpg"
+                      alt="Gokula Krishnan Image"
+                    />
+                  </figure>
+                  <h1 class="title is-4">Gokula Krishnan</h1>
+                </div>
+                <div class="column is-3 has-text-centered">
+                  <figure class="image is-square">
+                    <img
+                      class="is-rounded"
+                      src="res/pradeep.jpg"
+                      alt="Gokula Krishnan Image"
+                    />
+                  </figure>
+                  <h1 class="title is-4">Pradeep</h1>
+                </div>
+                <div class="column is-3"></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!--Creations-->
+    <div class="columns is-gapless">
+      <div
+        class="column is-12 is-vcentered"
+        style="height:100vh;background-color: blueviolet"
+      >
+        <div class="container"><p>Hi</p></div>
       </div>
     </div>
   </body>
