@@ -44,10 +44,6 @@ app.get("/googleplay", function(req, res) {
   res.sendFile(path.join(__dirname, "/res/googleplay.png"));
 });
 
-app.get("/RequestaQuote", function(req, res) {
-  res.sendFile(path.join(__dirname, "/views/requestQuote.html"));
-});
-
 app.get("/bg", function(req, res) {
   res.sendFile(path.join(__dirname, "/res/bg.jpg"));
 });

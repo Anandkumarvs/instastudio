@@ -93,7 +93,7 @@
             <a
               href="https://www.instagram.com/insta_studio_vellore/"
               style="color : rgb(106, 152, 155)"
-              targer="_blank"
+              target="_blank"
               ><i class="fab fa-instagram"></i
             ></a>
           </span>
@@ -126,7 +126,7 @@
           </div>
 
           <div class="navbar-item underline-item">
-            <a class="title is-6 has-text-white" href="/RequestaQuote"
+            <a class="title is-6 has-text-white" href="#RequestaQuote"
               >Request a quote</a
             >
           </div>
@@ -149,7 +149,7 @@
               <h2 class="subtitle is-4">
                 Vellore |
                 <span
-                  ><a class="subtitle" id="under" href="/RequestaQuote"
+                  ><a class="subtitle" id="under" href="#RequestaQuote"
                     >Request a quote</a
                   ></span
                 >
@@ -329,5 +329,91 @@
         <div class="container"><p>Hi</p></div>
       </div>
     </div> -->
+
+    <div class="columns is-gapless" id="RequestaQuote">
+      <div
+        class="column is-12 is-vcentered"
+        style="height : 100vh; background-color: gainsboro;"
+      >
+      <div class="container" style="width : 50%">
+        <div class="card">
+          <div class="class-header has-text-centered">
+            <div class="class-header-title">
+              <br>
+              <h1 class="button is-large is-info is-outlined"> Request a Quote</h1>
+            </div>
+          </div>
+          <div class="card-content">
+            <form action="/request" method="POST">
+            <div class="field">
+              <div class="label">
+                Name
+              </div>
+              <div class="control has-icons-left">
+                <input class="input" style="width: 40%;" type="text" placeholder="Full Name"></input>
+                <span class="icon is-left">
+                  <i class="fas fa-user-alt" style="color: blue;">
+                  </i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Address</label>
+              <div class="control" style="width: 50%;">
+                <textarea class="textarea is-info" style="width: 50%;" placeholder="Permanent Address and Landmark"></textarea>
+              </div>
+            </div>
+            
+            <div class="field">
+              <div class="label">
+                Phone Number
+              </div>
+              <div class="control has-icons-left" style="width: 20%">
+                <input class="input" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10" placeholder="Valid phone number"></input>
+                <span class="icon is-left">
+                  <i class="fas fa-phone" style="color: green;"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="label">
+                Email
+              </div>
+              <div class="control has-icons-left" style="width: 20%">
+                <input class="input" type="email" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10" placeholder="Valid email ID"></input>
+                <span class="icon is-left">
+                  <i class="fas fa-envelope" style="color: indianred;"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="label">Type</div>
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox" value="events">
+                  Events & Functions
+                </label><br>
+                <label class="checkbox">
+                  <input type="checkbox" value="photoshoots">
+                  Photoshoots
+                </label><br>
+                <label class="checkbox">
+                  <input type="checkbox" value="productphotography">
+                  Product Photography
+                </label>
+              </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-rounded is-danger is-link">Submit</button>
+                </div>
+              </div>   
+          </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
   </body>
 </html>
