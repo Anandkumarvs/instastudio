@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
 
+app.set("port", process.env.PORT || 5000);
+
 var admin = require("firebase-admin");
 
 var serviceAccount = require(path.join(
@@ -88,6 +90,6 @@ app.post("/request", function(req, res) {
   });
 });
 
-app.listen(3000, function() {
-  console.log("Server Started at " + Date());
+app.listen(app.get("port"), function() {
+  console.log("Server Started at " + Date() + " at port : " + app.get("port"));
 });
