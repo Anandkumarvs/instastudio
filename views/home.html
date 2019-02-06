@@ -4,10 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Insta Studios Vellore</title>
+    <link rel="shortcut icon" href="/log" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
     />
+
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
@@ -155,6 +157,7 @@
                 >
                 <!--Redirect to New Page-->
               </h2>
+              <p id="param"></p>
               <a
                 class="button is-large has-text-white is-rounded"
                 href="#Aboutus"
@@ -212,7 +215,7 @@
                 >
               </li>
               <li class="tab" onclick="openTab(event,'Team')">
-                <a
+                <a onclick="h()"
                   ><span class="icon is-small"
                     ><i class="fas fa-users" aria-hidden="true"></i></span
                   ><span>Team</span>
@@ -335,7 +338,7 @@
         class="column is-12 is-vcentered"
         style="height : 100vh; background-color: gainsboro;"
       >
-      <div class="container" style="width : 50%">
+      <div class="container">
         <div class="card">
           <div class="class-header has-text-centered">
             <div class="class-header-title">
@@ -343,14 +346,14 @@
               <h1 class="button is-large is-info is-outlined"> Request a Quote</h1>
             </div>
           </div>
-          <div class="card-content">
+          <div class="card-content" style="background-color: ivory;">
             <form action="/request" method="POST">
             <div class="field">
               <div class="label">
                 Name
               </div>
               <div class="control has-icons-left">
-                <input class="input" style="width: 40%;" type="text" placeholder="Full Name"></input>
+                <input class="input" name="name" style="width: 40%;" type="text" placeholder="Full Name"></input>
                 <span class="icon is-left">
                   <i class="fas fa-user-alt" style="color: blue;">
                   </i>
@@ -360,7 +363,7 @@
             <div class="field">
               <label class="label">Address</label>
               <div class="control" style="width: 50%;">
-                <textarea class="textarea is-info" style="width: 50%;" placeholder="Permanent Address and Landmark"></textarea>
+                <textarea class="textarea is-info" name="address" style="width: 50%;" placeholder="Permanent Address and Landmark"></textarea>
               </div>
             </div>
             
@@ -369,7 +372,7 @@
                 Phone Number
               </div>
               <div class="control has-icons-left" style="width: 20%">
-                <input class="input" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10" placeholder="Valid phone number"></input>
+                <input class="input" name="phone" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10" placeholder="Valid phone number"></input>
                 <span class="icon is-left">
                   <i class="fas fa-phone" style="color: green;"></i>
                 </span>
@@ -381,7 +384,7 @@
                 Email
               </div>
               <div class="control has-icons-left" style="width: 20%">
-                <input class="input" type="email" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10" placeholder="Valid email ID"></input>
+                <input class="input" type="email" name="email" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10" placeholder="Valid email ID"></input>
                 <span class="icon is-left">
                   <i class="fas fa-envelope" style="color: indianred;"></i>
                 </span>
@@ -391,22 +394,22 @@
               <div class="label">Type</div>
               <div class="control">
                 <label class="checkbox">
-                  <input type="checkbox" value="events">
+                  <input type="checkbox" name="type" value="events">
                   Events & Functions
                 </label><br>
                 <label class="checkbox">
-                  <input type="checkbox" value="photoshoots">
+                  <input type="checkbox" name="type" value="photoshoots">
                   Photoshoots
                 </label><br>
                 <label class="checkbox">
-                  <input type="checkbox" value="productphotography">
+                  <input type="checkbox" name="type" value="productphotography">
                   Product Photography
                 </label>
               </div>
             </div>
             <div class="field is-grouped">
                 <div class="control">
-                  <button class="button is-rounded is-danger is-link">Submit</button>
+                  <button class="button is-rounded is-danger is-link" type="submit">Submit</button>
                 </div>
               </div>   
           </form>
@@ -416,4 +419,5 @@
       </div>
     </div>
   </body>
+  
 </html>

@@ -18,6 +18,8 @@
   "homepage": "https://github.com/vgofranchise/instastudio#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "bulma-toast": "^1.4.0",
+    "express": "^4.16.4",
+    "firebase-admin": "^7.0.0"
   }
 }
